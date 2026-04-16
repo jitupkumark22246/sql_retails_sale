@@ -1,16 +1,16 @@
-## Project Overview
+# Project Overview
 
 This project focuses on analyzing sales transaction data using PostgreSQL.
 The goal is to extract meaningful insights such as total revenue, customer behavior, and product performance.
 
-## Objectives
+#  Objectives
   Analyze yearly and monthly sales trends
   Identify top-performing categories
   Handle missing (NULL) values in dataset
   Perform data cleaning and transformation
   Generate business insights using SQL queries
 
-## create data 
+# create data 
 
 
 CREATE TABLE transactions (
@@ -31,12 +31,12 @@ CREATE TABLE transactions (
 
 The following sql query were developed to answer specific business question 
 
-1. # write a sql query to retrieve all column for sales made on '2022-11-05':
+1. write a sql query to retrieve all column for sales made on '2022-11-05':
    '''sql
    select * from transactions where sale_date = '2022-11-05' ;
    '''
 
-2. # WASQ for retrieve all transaction where the category is "clothing" and the quentity sold is more than 4 in the month of nov-2022
+2.  WASQ for retrieve all transaction where the category is "clothing" and the quentity sold is more than 4 in the month of nov-2022
    '''sql
    
    select * from transactions
@@ -49,7 +49,7 @@ The following sql query were developed to answer specific business question
 
    '''
 
-3. # write a query to calculate the total sales for each category?
+3. write a query to calculate the total sales for each category?
    '''sql
    
 select category,sum(total_sale) as total_sales 
@@ -58,7 +58,7 @@ group by category ;
 
 '''
 
-4. # write a sql query to find the average gae of customer who purchase item from the 'Beauty' categotry?
+4. write a sql query to find the average gae of customer who purchase item from the 'Beauty' categotry?
    '''sql
   select 
 	round(avg(age)) as agv_age
@@ -67,7 +67,7 @@ group by category ;
    
    '''
 
-5. #  write a sql query to find all transsactions where the total sales is greater than 1000?
+5.  write a sql query to find all transsactions where the total sales is greater than 1000?
    '''sql
 
   select *
@@ -76,7 +76,7 @@ group by category ;
 
    '''
 
-6. # write a sql query to find  the total number of transactions(transaction_id) made by each gender in each category?
+6. write a sql query to find  the total number of transactions(transaction_id) made by each gender in each category?
    '''sql
 select gender , category,
 count(transaction_id) as tota_transaction
@@ -85,7 +85,7 @@ group by gender, category
 
 '''
 
-7. # write a query to calculate the average sale for each month . find out best selling month in each year?
+7. write a query to calculate the average sale for each month . find out best selling month in each year?
 '''sql
 
 select * 
@@ -105,7 +105,7 @@ where rank=1;
 '''
 
 
-8. # write a sql query to find the top 5 customer based on the highest total sales 
+8.  write a sql query to find the top 5 customer based on the highest total sales 
 '''sql
    
 select customer_id,
@@ -117,7 +117,7 @@ limit 5 ;
 
 '''
 
-9. #  write a sql query to find the number of unique customer who  purchase item from each category?
+9.  write a sql query to find the number of unique customer who  purchase item from each category?
 '''sql
 
 select category, count(distinct customer_id) as unique_cust
@@ -127,7 +127,7 @@ order by unique_cust
 limit 5 ;
 
 ''' 
-10 . #  write a sql query to  create each shift and number of orders (example morning <=12,afternoon between 12&17 and evening >17)
+10 . write a sql query to  create each shift and number of orders (example morning <=12,afternoon between 12&17 and evening >17)
 '''sql 
 
 with hourly_sale
