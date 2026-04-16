@@ -32,11 +32,11 @@ CREATE TABLE transactions (
 The following sql query were developed to answer specific business question 
 
 1. ** write a sql query to retrieve all column for sales made on '2022-11-05':
-'''sql
+   ``` sql
    select * from transactions where sale_date = '2022-11-05' ;
-'''
+```
 
-2. ** WASQ for retrieve all transaction where the category is "clothing" and the quentity sold is more than 4 in the month of nov-2022
+3. ** WASQ for retrieve all transaction where the category is "clothing" and the quentity sold is more than 4 in the month of nov-2022
 '''sql
    
    select * from transactions
