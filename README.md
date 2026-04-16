@@ -56,7 +56,6 @@ select category,sum(total_sale) as total_sales
 from transactions
 group by category ; 
 
-'''
 
 4. ** write a sql query to find the average gae of customer who purchase item from the 'Beauty' categotry?
 '''sql
